@@ -1,0 +1,19 @@
+DATA:
+  DATASET_NAME: ee4d
+  REPRE_TYPE: v1_beta  # only trajectory representation is used here
+  COND_BETAS: False  # betas are not provided as condition input
+  COND_IMG_FEAT: True
+  COND_TRAJ: False  # traj is not provided as condition input but predicted
+  WINDOW: 80
+  IMG_FEAT_TYPE: dinov2
+  BATCH_SIZE: 128
+  NUM_WORKERS: 8
+
+MODEL:
+  MODEL_NAME: uem
+  LEARN_TRAJ: True  # predict trajectory
+
+TRAIN:
+  WEIGHT_DECAY: 0.01
+  LR: 3.e-5
+  NUM_EPOCHS: 350

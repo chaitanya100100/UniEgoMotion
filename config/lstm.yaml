@@ -1,0 +1,18 @@
+DATA:
+  DATASET_NAME: ee4d
+  REPRE_TYPE: v4_beta  # betas are inferred
+  COND_BETAS: False  # betas are not provided as condition input
+  COND_IMG_FEAT: True
+  COND_TRAJ: True
+  WINDOW: 80
+  IMG_FEAT_TYPE: dinov2
+  BATCH_SIZE: 64
+
+MODEL:
+  MODEL_NAME: lstm
+  LSTM_TYPE: ''  # Have to specify 'gen' or 'fore' in the command line
+
+TRAIN:
+  WEIGHT_DECAY: 0.01
+  LR: 3.e-5
+  NUM_EPOCHS: 350

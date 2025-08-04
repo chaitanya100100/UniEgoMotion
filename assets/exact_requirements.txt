@@ -1,0 +1,17 @@
+# My exact environment
+loguru==0.7.3
+yacs
+IPython
+matplotlib
+scikit-learn==1.14.1
+joblib==1.4.2
+smplx
+trimesh==4.5.3
+opencv-python==4.11.0
+pyrender==0.1.45
+ipdb
+einops==0.8.0
+blendify==2.0.0
+pandas==2.2.3
+projectaria_tools==1.6.0
+av==14.0.1

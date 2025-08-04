@@ -1,0 +1,16 @@
+loguru
+yacs
+IPython
+matplotlib
+scikit-learn
+joblib
+smplx
+trimesh
+opencv-python
+pyrender
+ipdb
+einops
+blendify
+pandas
+projectaria_tools
+av

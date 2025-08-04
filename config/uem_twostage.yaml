@@ -1,0 +1,13 @@
+DATA:
+  DATASET_NAME: ee4d
+  REPRE_TYPE: v1_beta  # betas are inferred
+  COND_BETAS: False  # betas are not provided as condition input
+  COND_IMG_FEAT: True
+  COND_TRAJ: True
+  WINDOW: 80
+  IMG_FEAT_TYPE: dinov2
+
+MODEL:
+  MODEL_NAME: uem
+  MOTION_CKPT_PATH: ./exp/uem_v1b_dinov2/last.ckpt
+  TRAJ_CKPT_PATH: ./exp/trajuem_v1b_dinov2/last.ckpt
