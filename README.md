@@ -40,12 +40,15 @@ Download the SMPL-X model from [here](https://smpl-x.is.tue.mpg.de/) and set a p
 See `DATASET.md` to download and setup the dataset. This is required to run the model.
 
 ## Pretrained UniEgoMotion Model
-Download the pretrained model from [here (Link TBD)]() and place it in the `exp/` directory.
+Download the pretrained model from [here](https://downloads.cs.stanford.edu/simurgh/chpatel/uem_v4b_dinov2.zip) and place it in the `exp/` directory.
 
 ## Visualizing UniEgoMotion Outputs
 Run the following command to visualize UniEgoMotion outputs on some validation samples for all three tasks.
 ```
-python run/vis_uem.py CONFIG ./config/uem.yaml TRAIN.EXP_PATH ./exp/uem_v4b_dinov2/  MODEL.CKPT_PATH last_ckpt
+python run/vis_uem.py \
+CONFIG ./config/uem.yaml \
+TRAIN.EXP_PATH ./exp/uem_v4b_dinov2/ \
+MODEL.CKPT_PATH last_ckpt
 ```
 
 ## Training and Evaluating UniEgoMotion from Scratch
@@ -53,11 +56,10 @@ Run the following to train UniEgoMotion model. Use an appropriate experiment pat
 ```
 python run/train_uem.py \
 CONFIG ./config/uem.yaml \
-TRAIN.EXP_PATH <exp_path> \
-MODEL.CKPT_PATH last_ckpt
+TRAIN.EXP_PATH <exp_path>
 ```
 
-Run the following command to evaluate UniEgoMotion model on the validation set. It will save the predictions for all three tasks in the experiment directory, and compute 3D and semantic metrics.
+Run the following command to evaluate UniEgoMotion model on the validation set. It will save the predictions for all three tasks in the experiment directory, and compute 3D and semantic metrics. You will need to setup TMR model through [this repo](https://github.com/nv-tlabs/stmc) and set the path in `model/tmr_eval_model.py`.
 ```
 python eval/eval_exp.py \
 CONFIG ./config/uem.yaml \

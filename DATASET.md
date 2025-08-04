@@ -3,8 +3,8 @@
 The **EE4D-Motion** dataset provides SMPLX parameters for the EgoExo4D takes (each video in the EgoExo4D dataset is referred to as a *take*). It is designed to be used alongside other EgoExo4D annotations for various 3D motion tasks. In the **UniEgoMotion** project, we use it for egocentric motion reconstruction, forecasting, and generation. EE4D-Motion is curated through a comprehensive data processing pipeline that includes bounding box detection, 2D keypoint estimation, single-view HMR prediction, a two-stage SMPLX fitting, and several quality control measures.
 
 We provide the dataset in the following two formats. Download as necessary.
-- [ee4d_motion.zip (Link TBD)](): Raw EE4D-Motion annotations for total 4792 takes. This is not required for running or training UniEgoMotion but may be useful for your own research.
-- [ee4d_motion_uniegomotion.zip (Link TBD)](): Processed and filtered EE4D-Motion data for UniEgoMotion running or training UniEgoMotion. The filtered data has 2032 training takes and 560 validation takes.
+- [ee4d_motion.zip](https://downloads.cs.stanford.edu/simurgh/chpatel/ee4d_motion.zip) (10GB): Raw EE4D-Motion annotations for total 4792 takes (~208 hours). This is not required for running or training UniEgoMotion but may be useful for your own research.
+- [ee4d_motion_uniegomotion.zip](https://downloads.cs.stanford.edu/simurgh/chpatel/ee4d_motion_uniegomotion.zip) (35GB): Processed and filtered EE4D-Motion data, DINOv2 features, and other metadata for running or training UniEgoMotion. The filtered data has 2032 training takes and 560 validation takes (~110 hours).
 
 ## Dataset Organization
 
