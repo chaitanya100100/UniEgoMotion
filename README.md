@@ -1,5 +1,5 @@
 # UniEgoMotion
-This repository contains training and inference code for the following paper: 
+This repository provides the dataset and code for the following paper: 
 ```
 UniEgoMotion: A Unified Model for Egocentric Motion Reconstruction, Forecasting, and Generation
 Chaitanya Patel, Hiroki Nakamura, Yuta Kyuragi, Kazuki Kozuka, Juan Carlos Niebles, Ehsan Adeli
