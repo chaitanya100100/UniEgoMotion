@@ -6,6 +6,7 @@ Chaitanya Patel, Hiroki Nakamura, Yuta Kyuragi, Kazuki Kozuka, Juan Carlos Niebl
 ICCV 2025  
 ```
 [[Project Website](https://chaitanya100100.github.io/UniEgoMotion)]
+[[ArXiv](https://arxiv.org/abs/2508.01126)]
 
 ![Teaser](assets/teaser.png)
 
