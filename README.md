@@ -38,7 +38,7 @@ pip3 install -r requirements.txt
 Download the SMPL-X model from [here](https://smpl-x.is.tue.mpg.de/) and set a proper path in `get_smpl` function in `dataset/smpl_utils.py`.
 
 ## EE4D-Motion Dataset
-See `DATASET.md` to download and setup the dataset. This is required to run the model.
+See [DATASET.md](DATASET.md) to download and setup the dataset. This is required to run the model.
 
 ## Pretrained UniEgoMotion Model
 Download the pretrained model from [here](https://downloads.cs.stanford.edu/simurgh/chpatel/uem_v4b_dinov2.zip) and place it in the `exp/` directory.
@@ -79,11 +79,12 @@ python eval/vis_uem_preds.py \
 Commands to train UniEgoMotion model and some ablation experiments:
 - `python run/train_uem.py CONFIG ./config/uem.yaml TRAIN.EXP_PATH <exp_path>` for original UniEgoMotion model.
 - Use `MODEL.ENCODER_TSFM add` to train transformer encoder baseline.
-- Use `DATA.REPRE_TYPE v1_beta` to train with global motion representation. See `dataset.representation_utils.py` for the explanation of different motion representations. You will need to compute the statistics for this representation first. See `DATASET.md` for more details.
+- Use `DATA.REPRE_TYPE v1_beta` to train with global motion representation. See `dataset.representation_utils.py` for the explanation of different motion representations. You will need to compute the statistics for this representation first. See [DATASET.md](DATASET.md) for more details.
 - Use `DATA.COND_IMG_FEAT False` to train without egocentric video conditioning i.e. only conditioned on egocentric trajectory.
-- Use `DATA.IMG_FEAT_TYPE clip_all` to train with CLIP features instead of DINOv2. Note that you will need to extra CLIP features for all takes and collect them into one file per split. See `DATASET.md` for more details.
+- Use `DATA.IMG_FEAT_TYPE clip_all` to train with CLIP features instead of DINOv2. Note that you will need to extra CLIP features for all takes and collect them into one file per split. See [DATASET.md](DATASET.md) for more details.
 
 Commands to train baselines:
+- See [this](https://github.com/chaitanya100100/UniEgoMotion/issues/2) issue for the updated head tracking metrics of egoallo.
 - `python run/train_uem.py CONFIG ./config/lstm.yaml TRAIN.EXP_PATH <exp_path> MODEL.LSTM_TYPE gen` to train LSTM baseline for egocentric motion generation. Use `MODEL.LSTM_TYPE fore` for forecasting baseline.
 - `python run/train_uem.py CONFIG ./config/uem_traj.yaml TRAIN.EXP_PATH <exp_path>` to train UniEgoMotion trajectory prediction model (instead of whole body pose). The trajectory conditioned motion prediction model will be the original UniEgoMotion model. Use `CONFIG ./config/uem_twostage.yaml` with appropriate arguments for evaluation and visualization.
 
